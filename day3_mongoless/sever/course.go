@@ -16,13 +16,13 @@ type Course struct {
 }
 func readAllCourses(c *gin.Context) {
 	Courses := []Course{
-		{Id: "120", Name: "sneha",
+		{Id: "120", Name: "python for data science",
 			Duration: "3 months",
-			Triner_name: "Nithin", Level: "Beginner", Description:"python for data science",
+			Triner_name: "Nithin", Level: "Beginner", Description:"",
 			Price: 4000.00},
-			{Id: "150", Name: "sushmitha",
+			{Id: "150", Name: "DEART language",
 			Duration: "3 months",
-			Triner_name: "Mahesh", Level: "Advance", Description:"DEART language",
+			Triner_name: "Mahesh", Level: "Advance", Description:"",
 			Price: 6000.00},
 	}
 	fmt.Println(Courses)
@@ -56,7 +56,7 @@ func main() {
     r.GET("/Courses",readAllCourses)
 	// r.GET("/flights/:id",readFlightById)
 	// r.POST("/flights",createFlight)
-	 r.PUT("/flights/:id",updateCourse)
+	 r.PUT("/Course/:id",updateCourse)
 	// r.DELETE("/flights/:id",deleteFlight)
 	//server (default portal 8080)
 	r.Run(":8080")
